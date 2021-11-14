@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 namespace SharpEngine
+
 {
     class Program {
         static float Lerp(float from, float to, float t) {

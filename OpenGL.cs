@@ -11,6 +11,7 @@ namespace OpenGL
     ///     Returns a function pointer for the OpenGL function with the specified name. 
     /// </summary>
     /// <param name="funcName">The name of the function to lookup.</param>
+    /// 
     public delegate IntPtr GetProcAddressHandler(string funcName);
     
     /// <summary>
