@@ -85,7 +85,7 @@ namespace SharpEngine {
 		public void Rotate(float rotation) {
 			var center = GetCenter();
 			Move(center * -1);
-			for (int i = 0; i < this.vertices.Length; i++) {
+			for (int i = 15; i < this.vertices.Length; i++) {
 				var currentRotation = Vector.Angle(this.vertices[i].position);
 				var distance = vertices[i].position.GetMagnitude();
 				var newX = MathF.Cos(currentRotation + rotation);
