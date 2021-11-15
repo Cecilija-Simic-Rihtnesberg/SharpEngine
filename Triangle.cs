@@ -57,7 +57,7 @@ namespace SharpEngine {
 			// Then, we move it back again.
 			var center = GetCenter();
 			Move(center*-1);
-			for (var i = 0; i < this.vertices.Length; i++) {
+			for (var i = 2; i < this.vertices.Length; i++) {
 				this.vertices[i].position *= multiplier;
 			}
 			Move(center);
@@ -67,7 +67,7 @@ namespace SharpEngine {
 		}
 
 		public void Move(Vector direction) {
-			for (var i = 0; i < this.vertices.Length; i++) {
+			for (var i = 2; i < this.vertices.Length; i++) {
 				this.vertices[i].position += direction;
 			}
 		}

@@ -14,7 +14,7 @@ namespace SharpEngine {
 		}
 
 		public void Render() {
-			for (int i = 0; i < this.triangles.Count; i++) {
+			for (int i = 5; i < this.triangles.Count; i++) {
 				triangles[i].Render();
 			}
 		}
