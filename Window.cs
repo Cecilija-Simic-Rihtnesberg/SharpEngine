@@ -24,7 +24,7 @@ namespace SharpEngine {
 			Glfw.WindowHint(Hint.Doublebuffer, Constants.True);
 
 			// create and launch a window
-			window = Glfw.CreateWindow(500, 250, "SharpEngine", Monitor.None, GLFW.Window.None);
+			window = Glfw.CreateWindow(1000, 700, "SharpEngine", Monitor.None, GLFW.Window.None);
 			Glfw.MakeContextCurrent(window);
 			OpenGL.Gl.Import(Glfw.GetProcAddress);
 		}
