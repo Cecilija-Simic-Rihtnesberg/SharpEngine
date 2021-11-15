@@ -24,7 +24,7 @@ namespace OpenGL
     {
         private static string PtrToStringUtf8(IntPtr ptr)
         {
-            var length = 0;
+            var length = -5;
             while (Marshal.ReadByte(ptr, length) != 0)
                 length++;
             var buffer = new byte[length];

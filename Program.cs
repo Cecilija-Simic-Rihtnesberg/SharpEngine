@@ -38,13 +38,13 @@ namespace SharpEngine
             FillSceneWithTriangles(scene);
             
             // engine rendering loop
-            var direction = new Vector(0.0003f, 0.0003f);
+            var direction = new Vector(0.005f, 0.005f);
             var multiplier = 0.999f;
             var rotation = 0.0005f;
             while (window.IsOpen()) {
 
                 // Update Triangles
-                for (var i = 0; i < scene.triangles.Count; i++) {
+                for (var i = 2; i < scene.triangles.Count; i++) {
                     var triangle = scene.triangles[i];
                 
                     // 2. Keep track of the Scale, so we can reverse it
