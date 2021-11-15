@@ -15,7 +15,7 @@ namespace SharpEngine
         
         static void FillSceneWithTriangles(Scene scene) {
             var random = new Random();
-            for (var i = 0; i < 10; i++) {
+            for (var i = 0; i <5; i++) {
                 var triangle = new Triangle(new Vertex[] {
                     new Vertex(new Vector(-.1f, 0f), Color.Red),
                     new Vertex(new Vector(.1f, 0f), Color.Green),
