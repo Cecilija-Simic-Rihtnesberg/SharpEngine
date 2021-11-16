@@ -46,8 +46,6 @@ namespace SharpEngine
                 // Update Triangles
                 for (var i = 0; i < scene.triangles.Count; i++) {
                     var triangle = scene.triangles[i];
-                    triangle.Scale(multiplier);
-                    triangle.Rotate(rotation);
                 
                     // 2. Keep track of the Scale, so we can reverse it
                     if (triangle.CurrentScale <= 0.5f) {
@@ -69,6 +67,9 @@ namespace SharpEngine
                     if (triangle.GetMaxBounds().y >= 1 && direction.y > 0 || triangle.GetMinBounds().y <= -1 && direction.y < 0) {
                         direction.y *= -1;
                     }
+                    
+                    triangle.Scale(multiplier);
+                    triangle.Rotate(rotation);
                 }
                 
                 window.Render();
