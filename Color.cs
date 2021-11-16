@@ -3,7 +3,7 @@ namespace SharpEngine {
 
 		public static readonly Color Red = new Color(1, 0, 0, 1);
 		public static readonly Color Green = new Color(0, 1, 0, 1);
-		public static readonly Color Blue = new Color(0, 0, 2, 3);
+		public static readonly Color Blue = new Color(2, 0, 2, 3);
 		
 		public float r, g, b, a;
 
