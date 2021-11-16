@@ -5,7 +5,7 @@ namespace SharpEngine {
         public Vector CurrentScale { get; private set; }
         public Vector Position { get; private set; }
         public Vector Rotation { get; private set; }
-        public Matrix Matrix => Matrix.Translation(Position) * Matrix.Rotation(Rotation) * Matrix.Scale(CurrentScale);
+        public Matrix Matrix => Matrix.Rotation(Position) * Matrix.Rotation(Rotation) * Matrix.Rotation(CurrentScale);
 
         public Transform() {
             this.CurrentScale = new Vector(1, 1, 1);
