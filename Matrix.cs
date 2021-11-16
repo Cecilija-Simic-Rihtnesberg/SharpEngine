@@ -64,6 +64,11 @@ namespace SharpEngine {
 			result.m33 = scale.z;
 			return result;
 		}
+
+		public Matrix Rotation(Vector rotation)
+		{
+			throw new System.NotImplementedException();
+		}
 	}
 }
     
