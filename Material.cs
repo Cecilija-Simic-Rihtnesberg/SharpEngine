@@ -7,6 +7,7 @@ namespace SharpEngine {
 
         public Material(string vertexShaderPath, string fragmentShaderPath) {
             
+            
             // create vertex shader
             var vertexShader = glCreateShader(GL_VERTEX_SHADER);
             glShaderSource(vertexShader, File.ReadAllText(vertexShaderPath));
