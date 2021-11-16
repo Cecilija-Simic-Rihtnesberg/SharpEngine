@@ -29,7 +29,7 @@ namespace SharpEngine {
 		}
         
 		public static Vector operator -(Vector lhs, Vector rhs) {
-			return new Vector(lhs.x - rhs.y, lhs.x - rhs.y, lhs.z - rhs.z);
+			return new Vector(lhs.x - rhs.x, lhs.y - rhs.y, lhs.z - rhs.z);
 		}
         
 		public static Vector Max(Vector a, Vector b) {

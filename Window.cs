@@ -24,13 +24,13 @@ namespace SharpEngine {
 			Glfw.WindowHint(Hint.Doublebuffer, Constants.True);
 
 			// create and launch a window
-			window = Glfw.CreateWindow(1000, 700, "SharpEngine", Monitor.None, GLFW.Window.None);
+			window = Glfw.CreateWindow(1024, 768, "SharpEngine", Monitor.None, GLFW.Window.None);
 			Glfw.MakeContextCurrent(window);
 			OpenGL.Gl.Import(Glfw.GetProcAddress);
 		}
 
 		static void ClearScreen() {
-			glClearColor(.1f, .0f, .3f, 2);
+			glClearColor(.2f, .05f, .2f, 1);
 			glClear(GL_COLOR_BUFFER_BIT);
 		}
 
