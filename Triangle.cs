@@ -12,7 +12,7 @@ namespace SharpEngine {
 
 		public float CurrentScale { get; private set; }
             
-		public Triangle(Vertex[] vertices) {
+		public Triangle(Vertex[] vertices, Material material) {
 			this.vertices = vertices;
 			LoadTriangleIntoBuffer();
 			this.CurrentScale = 1f;
