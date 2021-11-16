@@ -1,4 +1,6 @@
 
+using System;
+
 namespace SharpEngine {
 	public struct Matrix {
 		// i wrote this line here manually:
@@ -49,21 +51,48 @@ namespace SharpEngine {
 				b.m14*a.m41+b.m24*a.m42+b.m34*a.m43+b.m44*a.m44);
 		}
 
-		public static Matrix Translation(Vector translation) {
+		static Matrix RotationX(float x) {
 			var result = Identity;
-			result.m14 = translation.x;
-			result.m24 = translation.y;
-			result.m34 = translation.z;
+			result.m22 = MathF.Cos(x);
+			result.m23 = -MathF.Sin(x);
+			result.m32 = MathF.Sin(x);
+			result.m33 = MathF.Cos(x);
 			return result;
 		}
 
-		public static Matrix Scale(Vector scale) {
+		static Matrix RotationY(float y) {
 			var result = Identity;
-			result.m11 = scale.x;
-			result.m22 = scale.y;
-			result.m33 = scale.z;
+			result.m11 = MathF.Cos(y);
+			result.m31 = -MathF.Sin(y);
+			result.m13 = MathF.Sin(y);
+			result.m33 = MathF.Cos(y);
 			return result;
 		}
+
+		static Matrix RotationZ(float z) {
+			var result = Identity;
+			result.m11 = MathF.Cos(z);
+			result.m12 = -MathF.Sin(z);
+			result.m21 = MathF.Sin(z);
+			result.m22 = MathF.Cos(z);
+			return result;
+		}
+		
+		// public static Matrix Translation(Vector translation) {
+		// 	var result = Identity;
+		// 	result.m14 = translation.x;
+		// 	result.m24 = translation.y;
+		// 	result.m34 = translation.z;
+		// 	return result;
+		// }
+		//
+		// public static Matrix Scale(Vector scale) {
+		// 	var result = Identity;
+		// 	result.m11 = scale.x;
+		// 	result.m22 = scale.y;
+		// 	result.m33 = scale.z;
+		// 	return result;
+		// }
 
 		public Matrix Rotation(Vector rotation)
 		{
