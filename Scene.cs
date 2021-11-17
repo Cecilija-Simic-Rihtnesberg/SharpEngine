@@ -3,14 +3,14 @@ using System.Collections.Generic;
 namespace SharpEngine {
     public class Scene {
 
-        public List<Triangle> triangles;
+        public List<Shape> triangles;
 
         public Scene() {
-            triangles = new List<Triangle>();
+            triangles = new List<Shape>();
         }
 		
-        public void Add(Triangle triangle) {
-            triangles.Add(triangle);
+        public void Add(Shape shape) {
+            triangles.Add(shape);
         }
 
         public void Render() {
@@ -20,26 +20,3 @@ namespace SharpEngine {
         }
     }
 }
-
-// using System.Collections.Generic;
-//
-// namespace SharpEngine {
-// 	public class Scene {
-//
-// 		public List<Triangle> triangles;
-//
-// 		public Scene() {
-// 			triangles = new List<Triangle>();
-// 		}
-// 		
-// 		public void Add(Triangle triangle) {
-// 			triangles.Add(triangle);
-// 		}
-//
-// 		public void Render() {
-// 			for (int i = 0; i < this.triangles.Count; i++) {
-// 				triangles[i].Render();
-// 			}
-// 		}
-// 	}
-// }

@@ -14,10 +14,5 @@ namespace SharpEngine {
                 new Vertex(new Vector(0f, height), Color.Blue)
             };
         }
-
-        public void Render()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
