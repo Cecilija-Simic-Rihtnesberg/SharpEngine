@@ -1,4 +1,3 @@
-
 using System;
 
 namespace SharpEngine {
@@ -100,4 +99,3 @@ namespace SharpEngine {
 		}
 	}
 }
-    
