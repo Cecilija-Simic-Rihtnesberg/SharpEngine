@@ -10,6 +10,7 @@ namespace SharpEngine {
         public static Vector Left => new Vector(-1, 0);
         public static Vector Right => new Vector(1, 0);
         public static Vector Zero => new Vector(0, 0);
+        public static double Down { get; set; }
 
         public Vector(float x, float y, float z) {
             this.x = x;
