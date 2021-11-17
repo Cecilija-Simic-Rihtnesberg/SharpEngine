@@ -3,6 +3,8 @@ namespace SharpEngine {
         public Rectangle(Material material) : base(CreateRectangle(), material) {
         }
 
+        public object Transform { get; set; }
+
         static Vertex[] CreateRectangle() {
             const float scale = .1f;
             return new Vertex[] {
