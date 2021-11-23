@@ -68,5 +68,10 @@ namespace SharpEngine {
             // DO NOT DIVIDE BY ZERO!
             return magnitude > 0 ? this / GetMagnitude() : this;
         }
+
+        public float GetSquareMagnitude()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
